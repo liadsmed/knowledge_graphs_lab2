@@ -4,6 +4,16 @@
         <title>Example</title>
     </head>
     <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
+        <script type="text/turtle" id="graph1"><![CDATA[
+            @prefix foo:  <http://www.example.com/xyz#> .
+            @prefix gr:   <http://purl.org/goodrelations/v1#> .
+            @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+            @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+         
+            foo:myCompany
+              a gr:BusinessEntity ;
+              rdfs:seeAlso <http://www.example.com/xyz> ;
+              gr:hasLegalName "Hepp Industries Ltd."^^xsd:string .
+         ]]></script>
     </body>
 </html>
