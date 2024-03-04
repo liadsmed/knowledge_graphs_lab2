@@ -4,16 +4,30 @@
         <title>Example</title>
     </head>
     <body>
-        <script type="text/turtle" id="graph1"><![CDATA[
-            @prefix foo:  <http://www.example.com/xyz#> .
-            @prefix gr:   <http://purl.org/goodrelations/v1#> .
-            @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-            @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-         
-            foo:myCompany
-              a gr:BusinessEntity ;
-              rdfs:seeAlso <http://www.example.com/xyz> ;
-              gr:hasLegalName "Hepp Industries Ltd."^^xsd:string .
-         ]]></script>
+        <script type="application/ld+json" >
+            {
+            "@context": {
+                "knows": {
+                    "@id":"http://xmlns.com/foaf/0.1/knows",
+                    "@type": "@id"
+                    },
+                "foaf": "http://xmlns.com/foaf/0.1/",
+                "xsd": "http://www.w3.org/2001/XMLSchema#"
+            },
+            "@id": "https://example.org/liasdesmedt",
+            "@type": "foaf:Person",
+            "foaf:name": {
+                "@value":"Lias De Smedt",
+                "@type": "xsd:string"},
+            "foaf:member":"LSV Chesspirant",
+            "foaf:age": {
+                "@value":"22",
+                "@type": "xsd:integer"},
+            "https://home":"Melle",
+            "https://studies": "Computer Science",
+            "https://transport": "bike",
+            "foaf:knows": ["https://example.org/woutdesaegher",
+             "https://example.org/jitsedesmet"]
+        }</script>
     </body>
 </html>
