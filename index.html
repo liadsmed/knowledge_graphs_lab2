@@ -15,10 +15,9 @@
                     },
                 "foaf": "http://xmlns.com/foaf/0.1/",
                 "xsd": "http://www.w3.org/2001/XMLSchema#",
-                "bike": "http://purl.org/holy/ns#Bike",
+                "purl": "http://purl.org/holy/ns#",
                 "dbpedia_owl":"http://dbpedia.org/ontology/",
-                "student_of": "http://vocab.getty.edu/ontology#ulan1102_student_of",
-                "member_of": "http://vocab.getty.edu/ontology#ulan1317_member_of",
+                "vocabgetty": "http://vocab.getty.edu/ontology#",
                 "s4wear": "https://saref.etsi.org/saref4wear/"
             },
             "@id": "https://liadsmed.github.io/knowledge_graphs_lab2/#me",
@@ -26,16 +25,17 @@
             "foaf:name": {
                 "@value":"Lias De Smedt",
                 "@type": "xsd:string"},
-            "member_of:":"https://www.merelbeke.be/schaakclub-lsv-chesspirant-2000",
+            "vocabgetty:ulan1317_member_of":"https://www.merelbeke.be/schaakclub-lsv-chesspirant-2000",
             "foaf:age": {
                 "@value":"22",
                 "@type": "xsd:integer"},
             "dbpedia_owl:hometown":"https://www.wikidata.org/wiki/Q696355",
-            "student_of:": "https://studiekiezer.ugent.be/2024/master-of-science-in-computer-science-engineering-en",
-            "s4wear:meansOfTransport": "bike:",
+            "vocabgetty:ulan1102_student_of": "https://studiekiezer.ugent.be/2024/master-of-science-in-computer-science-engineering-en",
+            "s4wear:meansOfTransport": "purl:Bike",
             "foaf:knows": ["https://wodsaegh.github.io/#me",
              "https://example.org/jitsedesmet"]
-        }</script>
+        }
+    </script>
 </body>
 
 </html>
